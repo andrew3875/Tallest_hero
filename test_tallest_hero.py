@@ -56,6 +56,18 @@ class TestGetTallestHero(unittest.TestCase):
 
         self.assertNotEqual(hero["appearance"]["gender"], "Male")
 
+    def test_height_is_not_empty(self):
+        hero = get_tallest_hero("Male", True)
+
+        height = hero["appearance"]["height"][1]
+
+        self.assertNotEqual(height, "-")
+
+    def test_hero_has_name(self):
+        hero = get_tallest_hero("Female", True)
+
+        self.assertNotEqual(hero["name"], "")
+
 
 if __name__ == "__main__":
     unittest.main()
