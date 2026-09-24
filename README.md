@@ -2,6 +2,10 @@
 
 Скрипты для поиска самого высокого героя по API
 
+## Установка
+```bash
+pip install -r requirements.txt
+```
 ## Использование функции
 ```python
 get_tallest_hero("Male", True)
